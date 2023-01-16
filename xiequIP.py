@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-# author: Bean
-# datetime:2023/1/16 18:36
-
+"""
+cron: 20 */5 * * * *
+new Env('我在校园健康打卡');
+"""
 #实现功能 添加当前公网ip到携取白名单
 #携取代理 注册链接：https://www.xiequ.cn/index.html?92fd9f33
 
