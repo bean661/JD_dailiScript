@@ -43,12 +43,11 @@ def del_all():
     response = session.get(url=del_all_url, headers=headers, verify=False)
     msg = response.text
     if msg=="success":
-        print("删除成功")
+        print("删除白名单IP成功")
     return msg
 def get_ip():
-    res = requests.get('http://myip.ipip.net', timeout=5).text
-    ip=res[6:21]
-    print(res[6:21])
+    ip = requests.get('https://checkip.amazonaws.com').text.strip()
+    print("当前公网IP:"+ip)
     return ip
 # print(del_all())
 def add_bmd(new_ip):
@@ -63,7 +62,7 @@ def add_bmd(new_ip):
     response = session.get(url=url, headers=headers, verify=False)
     msg = response.text
     if msg=="success":
-        print("添加ip："+new_ip+"成功")
+        print("添加IP："+new_ip+"成功")
     return msg
 
 if __name__ == '__main__':
